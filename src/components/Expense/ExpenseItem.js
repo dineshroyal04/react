@@ -1,6 +1,6 @@
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
-import Cord from'./Cord';
+import Cord from "../UI/Cord";
 function ExpenseItem(props) {
   // const { date, expense,title } = props;
   // const month = props.date.toLocaleString('en-Us', { month: 'long' });
