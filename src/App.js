@@ -46,4 +46,4 @@ function App() {
 }
 
 export default App;
-//for Git
+//for Gitgit push --set-upstream origin new
