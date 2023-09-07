@@ -16,6 +16,7 @@ function ExpenseItem(props) {
   return (
     <Cord className="expense-item">
       <ExpenseDate data={props.date}></ExpenseDate>
+      
       <div className="expense-item__description">
         <h2>{title}</h2>
         <div className="expense-item__price">${props.amount}</div>
