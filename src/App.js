@@ -1,6 +1,8 @@
+import { useState} from "react";
 import Expenses from "./components/Expense/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
-const expenses = [
+
+const DUMMY_EXPENSES = [
   {
     id: "e1",
     title: "Toilet Paper",
@@ -22,17 +24,26 @@ const expenses = [
   },
 ];
 function App() {
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  //console.log(expenses, "1st console");
+  const addExpenseHandler = (expense) => {
+    //  setExpenses((prevExpense) => {
+    //   return ([prevExpense,...expenses]);
+    //  });
+    // setExpenses(expense,...expenses);
+    setExpenses((prevExpense) => {
+      return [expense, ...prevExpense];
+    });
+    //console.log(expenses, "second console");
+  };
   
-  const addExpenseHandler = (expense)=>{
-    console.log("In app.js");
-    console.log(expense);
-  }
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler}/>
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
 }
 
 export default App;
+//for Gitgit push --set-upstream origin new
