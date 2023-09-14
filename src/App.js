@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import Expenses from "./components/Expense/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
@@ -25,18 +25,19 @@ const DUMMY_EXPENSES = [
 ];
 function App() {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
-  //console.log(expenses, "1st console");
+  //const [flag,setflag]=useState(false);
+  console.log(expenses);
   const addExpenseHandler = (expense) => {
-    //  setExpenses((prevExpense) => {
-    //   return ([prevExpense,...expenses]);
-    //  });
-    // setExpenses(expense,...expenses);
+  
     setExpenses((prevExpense) => {
       return [expense, ...prevExpense];
     });
-    //console.log(expenses, "second console");
+   // console.log(expense);
+    // setflag((prevExpense)=>{
+    //   return !prevExpense;
+    // })
   };
-  
+
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
@@ -46,4 +47,3 @@ function App() {
 }
 
 export default App;
-//for Gitgit push --set-upstream origin new

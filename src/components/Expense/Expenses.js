@@ -33,11 +33,13 @@ function Expenses(props) {
         amount={props.items[3].amount}
         date={props.items[3].date}
       ></ExpenseItem> */}
-      {props.items.map((expense) => { 
+      {props.items.map((expenses,index) => { 
+        //console.log(expenses);
       return (<ExpenseItem 
-      title={expense.title}
-      amount={expense.amount}
-      date={expense.date}
+      title={expenses.title}
+      amount={expenses.amount}
+      date={expenses.date}
+      key={index}
       />)
       })}
       
